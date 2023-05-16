@@ -24,19 +24,21 @@ public class JoystickData extends BaseData {
     public static final String TAG = JoystickData.class.getSimpleName();
     public float x;
     public float y;
+    public float m;
 
 
-    public JoystickData(float x, float y) {
+    public JoystickData(float x, float y, float m) {
         this.x = x;
         this.y = y;
+        this.m = m;
     }
 
     @Override
     public Message toRosMessage(Publisher<Message> publisher, BaseEntity widget) {
         JoystickEntity joyWidget = (JoystickEntity) widget;
 
-        float xAxisValue = joyWidget.xScaleLeft  + (joyWidget.xScaleRight - joyWidget.xScaleLeft) * ((x+1) /2f);
-        float yAxisValue = joyWidget.yScaleLeft  + (joyWidget.yScaleRight - joyWidget.yScaleLeft) * ((y+1) /2f);
+        float xAxisValue = (joyWidget.xScaleLeft  + (joyWidget.xScaleRight - joyWidget.xScaleLeft) * ((x+1) /2f))*m;
+        float yAxisValue = (joyWidget.yScaleLeft  + (joyWidget.yScaleRight - joyWidget.yScaleLeft) * ((y+1) /2f))*m;
 
         geometry_msgs.Twist message = (Twist) publisher.newMessage();
 

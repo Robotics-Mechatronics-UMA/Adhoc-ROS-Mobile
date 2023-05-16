@@ -11,6 +11,7 @@ import androidx.annotation.Nullable;
 import com.schneewittchen.rosandroid.R;
 import com.schneewittchen.rosandroid.ui.views.widgets.PublisherWidgetView;
 import com.schneewittchen.rosandroid.utility.Utils;
+import com.schneewittchen.rosandroid.widgets.buttonsubscriber.ButtonSubscriberView;
 
 
 /**
@@ -65,7 +66,7 @@ public class JoystickView extends PublisherWidgetView {
     private void moveTo(float x, float y){
         posX = x;
         posY = y;
-        this.publishViewData(new JoystickData(posX, posY));
+        this.publishViewData(new JoystickData(posX, posY, 1));
 
         // Redraw
         invalidate();
@@ -85,8 +86,10 @@ public class JoystickView extends PublisherWidgetView {
         switch(event.getActionMasked()) {
             case MotionEvent.ACTION_UP:
                 moveTo(0, 0);
+                this.publishViewData(new JoystickData(posX, posY, 0));
                 break;
             case MotionEvent.ACTION_MOVE:
+
             case MotionEvent.ACTION_DOWN:
                 moveTo(polars[0], polars[1]);
                 break;
