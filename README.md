@@ -1,4 +1,4 @@
-# adhoc-ROS-Mobile
+# Adhoc-ROS-Mobile
 
 This is an ad-hoc version of the Android application, named ROS-Mobile, for the robot operating system (Rottmann et al, 2020). The ad-hoc app is developed to integrate the capabilities of MQTT clients and ROS nodes on a smartphone.
 
