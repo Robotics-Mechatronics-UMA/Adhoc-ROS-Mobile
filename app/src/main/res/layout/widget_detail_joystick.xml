@@ -13,7 +13,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="X-Axis"
@@ -33,7 +33,7 @@
         android:text="Mapping"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewS" />
 
     <Spinner
         android:id="@+id/xDirSpinner"

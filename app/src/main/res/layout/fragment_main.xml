@@ -62,7 +62,7 @@
                     <com.google.android.material.tabs.TabItem
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="SSH" />
+                        android:text="MQTT" />
                 </com.google.android.material.tabs.TabLayout>
 
             </androidx.appcompat.widget.Toolbar>
@@ -94,7 +94,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="458dp"
             android:layout_marginTop="@dimen/navigation_header_height"
             android:background="@color/black01dp">
 
@@ -102,8 +102,10 @@
                 android:id="@+id/fragment"
                 android:name="com.schneewittchen.rosandroid.ui.fragments.config.ConfigurationsFragment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="457dp"
+                android:visibility="visible"
                 tools:layout="@layout/fragment_configurations" />
+
         </LinearLayout>
 
     </com.google.android.material.navigation.NavigationView>

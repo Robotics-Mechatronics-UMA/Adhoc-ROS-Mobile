@@ -104,11 +104,11 @@
                 android:layout_weight="0.1"
                 android:adjustViewBounds="true"
                 android:background="?actionBarItemBackground"
-                android:tint="@color/colorAccent"
                 app:layout_constraintBottom_toBottomOf="@+id/textView10"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/textView10"
-                app:srcCompat="@drawable/ic_expand_less_white_24dp" />
+                app:srcCompat="@drawable/ic_expand_less_white_24dp"
+                app:tint="@color/colorAccent" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/last_opened_recyclerview"
@@ -133,7 +133,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
             android:text="@string/add_configuration"
-            android:textColor="@color/black01dp" />
+            android:textColor="@color/black01dp"
+            app:tint="@color/battery1"/>
 
     </LinearLayout>
 
